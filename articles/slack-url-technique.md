@@ -8,19 +8,19 @@ published: false
 
 SlackでURLを共有する時、長いURL（リンク）をそのまま貼り付けると見た目が悪い。
 
-![](../images/20230720/01.png)
+![](/images/20230720/01.png)
 
 これを改善する1つの手段として、テキストにハイパーリンクを設定するというやり方がある。
 
-![](../images/20230720/02.png)
+![](/images/20230720/02.png)
 
 ハイパーリンクを設定するのは至って簡単。
 
 リンクを設定したいテキストを選択して、リンクボタンを選択。その後表示されるポップアップにURLを入力すると実現できる。
 
-![](../images/20230720/03.png)
+![](/images/20230720/03.png)
 
-![](../images/20230720/04.png)
+![](/images/20230720/04.png)
 
 ただし、この方法は非常に面倒くさい。そこで、もっと楽にリンク付きテキストを作る方法を紹介する。
 
@@ -29,7 +29,7 @@ SlackでURLを共有する時、長いURL（リンク）をそのまま貼り付
 実は先ほどのリンクを設定したいテキストを選択した状態のときに、`Ctrl + V`を押すことで、リンク付きテキストを実現できる。
 多くの場合、この手段で事足りるだろう。
 
-![](../images/20230720/05.png)
+![](/images/20230720/05.png)
 
 ## 2. リッチテキストを生成するブックマークレットを使用する
 
@@ -47,7 +47,7 @@ javascript:void(function(){let w=window.open(null,null,"height=60,width=500"),d=
 
 ブックマークレットを実行すると、画像のようなポップアップウィンドウが表示される。Copyボタンを押すと、リンク付きテキストがコピーされる。後はそれをSlackに貼り付けるだけだ。
 
-![](../images/20230720/06.png)
+![](/images/20230720/06.png)
 
 ※ブックマークレットとは何なのか、については[こちらの記事](https://qiita.com/aqril_1132/items/b5f9040ccb8cbc705d04)が詳しい。
 
@@ -61,15 +61,15 @@ javascript:void(function(){let w=window.open(null,null,"height=60,width=500"),d=
 javascript:(function(){var f=document.title;var c=location.href;var e="["+f+"]("+c+")";var b=document.createElement("div");b.appendChild(document.createElement("pre")).textContent=e;var d=b.style;d.position="fixed";d.left="-100%";document.body.appendChild(b);document.getSelection().selectAllChildren(b);var a=document.execCommand("copy");document.body.removeChild(b)})();
 ```
 
-![](../images/20230720/07.png)
+![](/images/20230720/07.png)
 
 このブックマークレットはmarkdownを書いている時は便利だが、Slackにコピペすると非常に醜い見た目になってしまう。
 
 実はこのmarkdown形式リンクテキストを、ショートカット一発でハイパーリンクテキストに変換する方法がある。対象のテキストを `Ctrl + A`で全選択したあと、`Ctrl + Shift + F`を押すと、一発でハイパーリンクテキストに変換できる。
 
-![](../images/20230720/08.png)
+![](/images/20230720/08.png)
 
-![](../images/20230720/09.png)
+![](/images/20230720/09.png)
 
 ## 4. Slackの入力欄のWYSIWYG化をやめる
 
@@ -79,13 +79,13 @@ Slackには、入力欄をmarkdownで書式設定できるようにするモー�
 
 環境設定 > 詳細設定から、「マークアップでメッセージを書式設定する」にチェックを入れると、入力欄では文字が装飾されなくなる。
 
-![](../images/20230720/10.png)
+![](/images/20230720/10.png)
 
 この状態で先ほどのmarkdown形式リンクテキストを入力し送信すると、markdownで指定した書式通り、ハイパーリンクテキストを作ってくれるのだ。
 
-![](../images/20230720/11.png)
+![](/images/20230720/11.png)
 
-![](../images/20230720/12.png)
+![](/images/20230720/12.png)
 
 元々の、入力欄で文字が装飾されるモードのことを一般に「WYSIWYG」と呼ぶらしい。どのモードを選択するかは、使い比べてみるのがよいと思う。
 
