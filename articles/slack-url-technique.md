@@ -39,6 +39,8 @@ SlackでURLを共有する時、長いURL（リンク）をそのまま貼り付
 
 [こちらのサイトで公開されているブックマークレットを利用すれば](https://media-massage.net/blog/linkbookmarklet/)、今開いているタイトルにリンクを含めたテキストをコピーできる。実際のブックマークレットは以下。
 
+@[card](https://media-massage.net/blog/linkbookmarklet/)
+
 ```js
 javascript:void(function(){let w=window.open(null,null,"height=60,width=500"),d=w.document;d.open();d.write('<body style="padding:10px 15px;margin:0;display:flex;flex-flow:row nowrap;align-items:center"><a id="a" style="flex-grow:1" target="_blank"></a><button id="copy" style="width:100px;height:30px;margin-left:10px;cursor:pointer">Copy</button></body>');d.title="Copy as rich-text";let u=window.location.toString(),c=d.getElementById("copy"),a=d.getElementById("a");a.innerHTML=window.document.title;a.href=u;function copyToClip(doc,html,text){function listener(e){e.clipboardData.setData("text/html",html);e.clipboardData.setData("text/plain",text||html);e.preventDefault()}doc.addEventListener("copy",listener);doc.execCommand("copy");doc.removeEventListener("copy",listener)}c.onclick=function(){copyToClip(d,a.outerHTML,u);w.close()};d.close();c.focus()}())
 ```
@@ -48,6 +50,8 @@ javascript:void(function(){let w=window.open(null,null,"height=60,width=500"),d=
 ![](../images/20230720/06.png)
 
 ※ブックマークレットとは何なのか、については[こちらの記事](https://qiita.com/aqril_1132/items/b5f9040ccb8cbc705d04)が詳しい。
+
+@[card](https://qiita.com/aqril_1132/items/b5f9040ccb8cbc705d04)
 
 ## 3. markdown形式のリンクテキストをショートカット一発でハイパーリンクに変換する
 
@@ -86,5 +90,7 @@ Slackには、入力欄をmarkdownで書式設定できるようにするモー�
 元々の、入力欄で文字が装飾されるモードのことを一般に「WYSIWYG」と呼ぶらしい。どのモードを選択するかは、使い比べてみるのがよいと思う。
 
 参考: [学生に向けて喋った/Slackの入力欄のWYSIWYG化を許すな/ガーリィレコード『フラフープデブ』 – chao情報](https://chao.tokyo/archives/2319)
+
+@[card](https://chao.tokyo/archives/2319)
 
 
