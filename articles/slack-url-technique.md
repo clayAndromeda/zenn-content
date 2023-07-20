@@ -1,5 +1,5 @@
 ---
-title: "Slackでリンク（URL）を投稿する時のテクニック"
+title: "Slackで綺麗にリンク（URL）を投稿するための方法と時短テクニック
 emoji: "🌊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
