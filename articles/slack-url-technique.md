@@ -3,7 +3,7 @@ title: "Slackで綺麗にリンク（URL）を投稿するための方法と時�
 emoji: "🌊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
-published: false
+published: true
 ---
 
 SlackでURLを共有する時、長いURL（リンク）をそのまま貼り付けると非常に見た目が悪い。
